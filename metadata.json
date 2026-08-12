@@ -1,0 +1,6 @@
+{
+  "name": "Chacha Vibes Only - Deluxe Salone",
+  "description": "A deeply nostalgic Indian Deluxe Barber Shop & Radio playlist experience with interactive salon tools, retro quotes, and music player.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

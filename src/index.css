@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-yatra {
+    font-family: 'Yatra One', cursive, serif;
+  }
+  .font-rozha {
+    font-family: 'Rozha One', serif;
+  }
+  .font-caveat {
+    font-family: 'Caveat', cursive;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel Decorative', serif;
+  }
+}
+
+@keyframes barberPole {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100px;
+  }
+}
+
+.barber-pole-bg {
+  background: repeating-linear-gradient(
+    -45deg,
+    #dc2626,
+    #dc2626 15px,
+    #ffffff 15px,
+    #ffffff 30px,
+    #2563eb 30px,
+    #2563eb 45px,
+    #ffffff 45px,
+    #ffffff 60px
+  );
+  background-size: 100% 100px;
+  animation: barberPole 3s linear infinite;
+}
+
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.8)); }
+  50% { opacity: 0.92; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5)); }
+  52% { opacity: 0.5; filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.2)); }
+  54% { opacity: 1; filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.9)); }
+}
+
+.neon-title-glow {
+  animation: neonFlicker 6s infinite ease-in-out;
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-12px) scale(1.2); opacity: 0.4; }
+  100% { transform: translateY(-28px) scale(1.6); opacity: 0; }
+}
+
+.steam-particle {
+  animation: steamRise 2.5s infinite ease-out;
+}
+
+@keyframes vibrate {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-3px, 3px) rotate(-1deg); }
+  40% { transform: translate(-3px, -3px) rotate(1deg); }
+  60% { transform: translate(3px, 3px) rotate(0deg); }
+  80% { transform: translate(3px, -3px) rotate(1deg); }
+}
+
+.vibrate-active {
+  animation: vibrate 0.15s infinite;
+}
+
+/* Custom Glassmorphism & Royal Emerald Gold Aesthetic */
+.glass-panel {
+  background: rgba(13, 23, 21, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(251, 191, 36, 0.18);
+  box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.8);
+}
+
+.glass-panel-gold {
+  background: rgba(18, 28, 24, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.85), inset 0 1px 1px rgba(251, 191, 36, 0.3);
+}
+
+/* Wood & Emerald grain texture emulation */
+.bg-wood-pattern {
+  background-color: #0b1714;
+  background-image: radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 70%),
+                    linear-gradient(180deg, rgba(6, 78, 59, 0.3) 0%, rgba(11, 23, 20, 0.95) 100%),
+                    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 2px, transparent 2px, transparent 4px);
+}
+
+.bg-salon-tile {
+  background-color: #06110f;
+  background-image: radial-gradient(#113d33 1.2px, transparent 1.2px), radial-gradient(#113d33 1.2px, #06110f 1.2px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
